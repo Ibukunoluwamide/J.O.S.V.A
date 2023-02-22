@@ -24,7 +24,7 @@
         <input class="form-control mb-3 col-9 col-md-8" type="password" placeholder="Enter Password" id="pw">
         <div class="text-center"> <button class="btn btn-warning text-white fw-bold col-9" onclick="signUp()">Sign
                 up</button></div>
-        <p class="text-center">Already have an account? <a href="">Login here</a></p>
+        <p class="text-center">Already have an account? <a href="signin.html">Login here</a></p>
     </div>
 
     <script>
@@ -50,11 +50,11 @@
                     Email: em.value,
                     passWord: pw.value
                 }
-                let josvaEmail = userInfo.email
+                // let josvaEmail = userInfo.email
                 allUsers.push(userInfo)
                 console.log(allUsers)
                 localStorage.setItem("josva", JSON.stringify(allUsers))
-                localStorage.setItem("josvausersemail", josvaEmail)
+                // localStorage.setItem("josvausersemail", josvaEmail)
                 window.location.href = "signin.html"
                 fn.value = ""
                 ln.value = ""
