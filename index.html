@@ -5,8 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    
 </head>
-<body>
-    <h1>Landing Page</h1>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg shadow shadow-sm p-fixed">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-semibold fs-4" href="#">J.O.S.V.A</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-dark fs-6 fw-semibold ms-5" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark fs-6 ms-5 fw-semibold" href="#">About</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link text-dark fs-6 ms-5 fw-semibold" href="#">FAQ</a>
+              </li>
+            </ul>
+            <span class="navbar-text d-flex">
+              <a href="signin.html" class="nav-link me-2"><button class=" btn btn-primary">signIn</button></a>
+              <a href="signUp.html" class="nav-link"><button class=" btn btn-primary">signUp</button></a>
+            </span>
+          </div>
+        </div>
+    </nav>
+    <!-- The Grid containing the two face -->
+    <section class="row gap-5">
+          <div class="col-lg-5">
+              <img src="personal-settings-concept-illustration_114360-1701-removebg-preview.png"alt="" class="w-100">
+          </div>
+        <div class="col-lg-5  mt-5">
+        <span class="h1" style="font-size: 90px;">J.O.S.V.A</span><br>
+        <span class="h1" style="font-size: 50px;">Todo Pro Max</span><br>
+        <p class="">Jinad Temitope, Adeosun Samuel, Aderibigbe Victor, Alao Olamide, and Adeshola Ayomide came together to create TodoProMax, a project management tool, with the goal of collaborating effectively from different locations. As remote work and distributed teams become more common, the need for effective collaboration tools has grown. TodoProMax is designed to help individuals and teams to manage tasks and projects effectively, offering features such as task assignment, deadline tracking, and real-time collaboration. The creators aimed to make the tool user-friendly and customizable, so that it could be used by teams of all sizes and types. Overall, TodoProMax is a powerful and collaborative tool that allows teams to work together from different locations efficiently.</p>
+    </div>
+      </section>
 </body>
 </html>
