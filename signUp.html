@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,50 +9,59 @@
     ">
     <title>Jinad was here</title>
 </head>
-<body class="bg-info">
-    <div class="container bg-white mt-5 rounded w-70 shadow-lg">
 
-        <h1 class="text-wte text-center">Sign Up</h1>
-        <h6 class="text-whi text-center"> J.O.S.V.A</h6>
-        <h6>Enter Name</h6>
-        <input class="form-control my-3" type="name" placeholder="Enter First Name" id="fn">
-        <h6>Enter Last Name</h6>
-        <input class="form-control my-3" type="name" placeholder="Enter Last Name" id="ln">
-        <h6>Enter Mail</h6>
-        <input class="form-control my-3" type="email" placeholder="Enter Email" id="em">
-        
-        <h6>Enter Password</h6>
-        <input class="form-control my-3" type="password" placeholder="Enter Password" id="ps">
-    
-        <button class="btn btn-warning text-white fw-bold" onclick="signUp()">Sign up</button><br>
-        <i>Already have an account? <a href="">Login here</a></i>
+<body class="bg-info">
+    <div class="bg-white col-11 col-md-5 mt-2 p-3 m-auto rounded shadow-lg">
+        <h1 class=" text-center" style="color: #0DCAF0;">J.O.S.V.A</h1>
+        <h6 class="text-center">Sign Up</h6>
+        <h6>Name</h6>
+        <input class="form-control mb-3 col-9 col-md-8" type="name" placeholder="Enter First Name" id="fn">
+        <h6>Last Name</h6>
+        <input class="form-control mb-3 col-9 col-md-8" type="name" placeholder="Enter Last Name" id="ln">
+        <h6>Email</h6>
+        <input class="form-control mb-3 col-9 col-md-8" type="email" placeholder="Enter Email" id="em">
+        <h6>Password</h6>
+        <input class="form-control mb-3 col-9 col-md-8" type="password" placeholder="Enter Password" id="ps">
+        <div class="text-center"> <button class="btn btn-warning text-white fw-bold col-9" onclick="signUp()">Sign
+                up</button></div>
+        <p class="text-center">Already have an account? <a href="">Login here</a></p>
     </div>
 
     <script>
-       
-        allUser = []
 
-        if(localStorage.josva) {
-            let old =  JSON.parse(localStorage.getItem("josva"))
-            old = allUser
+        allUsers = []
+
+        if (localStorage.josva) {
+            allUsers = JSON.parse(localStorage.getItem("josva"))
         }
 
-        const signUp = ()=>{
+        const signUp = () => {
+            if (fn.value == "" || ln.value == "" || em.value == "" || pw.value == "") {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Invalid Details',
+                    text: 'All fields must be filled',
+                    confirmButtonColor: "#0DCAF0", 
+                })
+            }
             userInfo = {
                 firstName: fn.value,
                 lastName: ln.value,
-                email: em.value,
+                Email: em.value,
                 passWord: ps.value
             }
-            allUser.push(userInfo)
-            console.log(allUser)
-            localStorage.setItem("josva", JSON.stringify(allUser))
-
+            allUsers.push(userInfo)
+            console.log(allUsers)
+            let josvaEmail = userInfo.email
+            localStorage.setItem("josva", JSON.stringify(allUsers))
+            localStorage.setItem("josvausersemail", josvaEmail)
             fn.value = ""
             ln.value = ""
             em.value = ""
             ps.value = ""
         }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
+
 </html>
