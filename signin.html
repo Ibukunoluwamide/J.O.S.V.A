@@ -29,14 +29,24 @@
     </div>
 
     <script>
-
+allUsers = JSON.parse(localStorage.getItem("josva"))
+console.log(allUsers)
         const signIn=()=>{
-            let user ={
-                userPass: userPassword.value,
-                userMail: userEmail.value
-                
+            let found = false
+           
+            allUsers.map((eachItem)=>{
+                if(eachItem.password==userPassword.value && eachItem.Email== userEmail.value){
+                    found=true
+
+                }
+            })
+            if(found == true){
+                window.location.href="forgotPassword.html"
             }
-            console.log(user)
+            else{
+                alert("wroung password or email")
+            }
+            // console.log(user)
             userPassword.value=""
             userEmail.value=""
             
