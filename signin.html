@@ -32,7 +32,7 @@
         let allUsers = JSON.parse(localStorage.getItem("josva"))
         console.log(allUsers)
         const signIn = () => {
-            if (!userEmail || !userPassword) {
+            if (!userEmail.value || !userPassword.value) {
                 Swal.fire({
                     icon: 'error',
                     title: 'User Not Found',
