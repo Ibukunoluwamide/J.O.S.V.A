@@ -41,6 +41,7 @@
                 })
             }else{
             let found = false
+           if (allUsers) {
             allUsers.map((eachItem,index) => {
                 if (eachItem.passWord == userPassword.value && eachItem.Email == userEmail.value) {
                     Swal.fire({
@@ -71,6 +72,14 @@
             }
 
 
+           }else{
+            Swal.fire({
+                    icon: 'error',
+                    title: 'User Not Found',
+                    text: 'Invalid Email address or Password',
+                    confirmButtonColor: '#3085d6',
+                })
+           }
         }
     }
     </script>

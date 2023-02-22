@@ -50,11 +50,9 @@
                     Email: em.value,
                     passWord: pw.value
                 }
-                // let josvaEmail = userInfo.email
                 allUsers.push(userInfo)
                 console.log(allUsers)
                 localStorage.setItem("josva", JSON.stringify(allUsers))
-                // localStorage.setItem("josvausersemail", josvaEmail)
                 window.location.href = "signin.html"
                 fn.value = ""
                 ln.value = ""
