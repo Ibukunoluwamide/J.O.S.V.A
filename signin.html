@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body class="bg-info"> 
+
+    <div class="container">
+        <div class="row">
+            <div class="contain border border-3 border-warning bg-light shadow col-6 mt-4 mx-auto rounded">
+                <h3 class="text-center text-info">signin page</h3>
+                <label for="" style="font-size:15px;">Enter Your Email :</label>
+                <input style="font-size:14px;" class="form-control mt-2 mb-2 border border-1 border-warning" type="text" placeholder="enter your email"
+                    id="userPassword">
+                <label for="" style="font-size:15px;">Enter Your Password :</label>
+                <input style="font-size:14px;" class="form-control mt-2 mb-2 border border-1 border-warning" type="text"
+                    placeholder="enter your password" id="userEmail">
+                <button class="form-control mt-3 mb-3 bg-warning w-50 mx-auto text-light" onclick="signIn()">Sign in
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const signIn=()=>{
+
+            let user ={
+                userPass:userPassword.value,
+                userMail:userEmail.value
+                
+            }
+            console.log(user)
+            userPassword.value=""
+            userEmail.value=""
+            
+        }
+    </script>
+</body>
+
+</html>
